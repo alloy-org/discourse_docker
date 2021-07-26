@@ -82,10 +82,7 @@ run:
        #!/bin/bash
        sv stop unicorn
 
-  - exec: mkdir -p ~/.ssh
-  - exec: ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-  - exec: ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
-  - exec: git remote set-url origin git@github.com:alloy-org/discourse.git
+  - exec: git remote set-url https://github.com/alloy-org/discourse.git
 
   - exec:
       cd: $home
