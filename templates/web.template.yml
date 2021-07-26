@@ -86,6 +86,7 @@ run:
       cd: $home
       hook: code
       cmd:
+        - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
         - git remote set-url origin git@github.com:alloy-org/discourse.git
         - git reset --hard
         - git clean -f
