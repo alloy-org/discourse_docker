@@ -86,6 +86,7 @@ run:
       cd: $home
       hook: code
       cmd:
+        - git remote set-url origin git@github.com:alloy-org/discourse.git
         - git reset --hard
         - git clean -f
         - git remote set-branches --add origin main
