@@ -82,9 +82,6 @@ run:
        #!/bin/bash
        sv stop unicorn
 
-  - exec: git remote set-url origin https://github.com/alloy-org/discourse.git
-  - exec: mkdir -p /var/spool/anacron
-
   - exec:
       cd: $home
       hook: code
